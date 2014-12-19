@@ -1,0 +1,8 @@
+﻿<NavigationWindow x:Class="ACM.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Acme Customer Management" 
+        Height="350" Width="500"
+        Source="Views/CustomerListView.xaml"
+        ShowsNavigationUI="False">
+</NavigationWindow>

@@ -1,0 +1,145 @@
+﻿<Page x:Class="ACM.WPF.Views.CustomerListView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:vms="clr-namespace:ACM.WPF.ViewModels"
+    mc:Ignorable="d"
+    d:DesignHeight="350" d:DesignWidth="500"
+	Title="Customer List">
+
+    <Page.DataContext>
+        <vms:CustomerListViewModel />
+    </Page.DataContext>
+    
+    <Page.Resources>
+        <Style
+            x:Key="KeyTextStyle"
+            TargetType="TextBlock">
+            <Setter
+                Property="FontFamily"
+                Value="{StaticResource ApplicationFontFamily}" />
+            <Setter
+                Property="FontSize"
+                Value="12" />
+            <Setter
+                Property="Foreground"
+                Value="Gold" />
+            <Setter
+                Property="VerticalAlignment"
+                Value="Top" />
+        </Style>
+    </Page.Resources>
+    
+   <Grid
+        x:Name="PageGrid"
+        Background="{StaticResource BackgroundBrush}">
+
+        <Border
+            Margin="10"
+            Style="{StaticResource ListBorderStyle}">
+
+            <Grid
+                x:Name="ListGrid">
+                <Grid.RowDefinitions>
+                    <!-- Column Headers -->
+                    <RowDefinition
+                        Height="Auto" />
+                    <!-- Data -->
+                    <RowDefinition
+                        Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <!-- Column Headers -->
+                <Grid
+                    Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition
+                            Width="100" />
+                        <ColumnDefinition
+                            Width="100" />
+                        <ColumnDefinition
+                            Width="200" />
+                        <ColumnDefinition
+                            Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock
+                        Grid.Column="0"
+                        Text="Last Name"
+                        Style="{StaticResource ColumnHeaderLeftTextStyle}" />
+                    <TextBlock
+                        Grid.Column="1"
+                        Text="First Name"
+                        Style="{StaticResource ColumnHeaderLeftTextStyle}" />
+                    <TextBlock
+                        Grid.Column="2"
+                        Text="Invoices"
+                        Style="{StaticResource ColumnHeaderLeftTextStyle}" />
+                </Grid>
+
+                <!-- Data -->
+                <ItemsControl
+                    Grid.Row="1"
+                    ItemsSource="{Binding CustomersList}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition
+                                        Width="100" />
+                                    <ColumnDefinition
+                                        Width="100" />
+                                    <ColumnDefinition
+                                        Width="200" />
+                                    <ColumnDefinition
+                                        Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock
+                                    Grid.Column="0"
+                                    Text="{Binding LastName}"
+                                    Margin="5"
+                                    Style="{StaticResource KeyTextStyle}" />
+                                <TextBlock
+                                    Grid.Column="1"
+                                    Margin="5"
+                                    Text="{Binding FirstName}"
+                                    Style="{StaticResource NormalTextStyle}" />
+                                <ItemsControl
+                                    Grid.Column="2"
+                                    ItemsSource="{Binding InvoiceList}">
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition
+                                                        Width="80" />
+                                                    <ColumnDefinition
+                                                        Width="80" />
+                                                </Grid.ColumnDefinitions>
+                                                <TextBlock
+                                                    Grid.Column="0"
+                                                    Margin="5"
+                                                    Text="{Binding InvoiceDate, StringFormat=d}"
+                                                    Style="{StaticResource NormalTextStyle}" />
+                                                <TextBlock
+                                                    Grid.Column="1"
+                                                    Margin="5"
+                                                    Text="{Binding InvoiceAmount}"
+                                                    Style="{StaticResource NormalTextStyle}" />
+                                            </Grid>
+
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+
+                            </Grid>
+
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </Grid>
+        </Border>
+        </Grid>
+       
+</Page>
