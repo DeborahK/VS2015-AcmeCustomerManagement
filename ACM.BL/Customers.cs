@@ -69,6 +69,7 @@ namespace ACM.BL
                     EmailAddress = dr["EmailAddress"].ToString(),
                     CustomerType = (CustomerTypeOption)dr["CustomerType"]};
 
+                // Retrieve the invoices for this customer
                 customerInstance.InvoiceList = Invoices.Retrieve(customerInstance.CustomerId);
 
                 customerList.Add(customerInstance);
