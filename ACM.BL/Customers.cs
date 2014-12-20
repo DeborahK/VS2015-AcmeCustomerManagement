@@ -45,7 +45,7 @@ namespace ACM.BL
 
         #region Retrieve
         /// <summary>
-        /// Retrieves a list from the database and gets a set of results.
+        /// Retrieves customers from the database and gets a set of results.
         /// </summary>
         /// <remarks>
         /// NOTE: You must first build the database using the provided scripts.
