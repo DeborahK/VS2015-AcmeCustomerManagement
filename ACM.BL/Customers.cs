@@ -55,7 +55,7 @@ namespace ACM.BL
         public static Customers Retrieve()
         {
             Customers customerList = new Customers();
-
+            // Retrieve the data using the data access component
             DataTable dt = Dac.ExecuteDataTable("CustomerRetrieve");
 
             // Process each customer row
