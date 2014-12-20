@@ -55,18 +55,19 @@ namespace ACM.BL
         public static Customers Retrieve()
         {
             Customers customerList = new Customers();
+
             // Retrieve the data using the data access component
             DataTable dt = Dac.ExecuteDataTable("CustomerRetrieve");
 
             // Process each customer row
-            foreach (DataRow row in dt.Rows)
+            foreach (DataRow dr in dt.Rows)
             {
                 Customer customerInstance = new Customer {
-                    CustomerId = (int)row["CustomerId"],
-                    LastName = row["LastName"].ToString(),
-                    FirstName = row["FirstName"].ToString(),
-                    EmailAddress = row["EmailAddress"].ToString(),
-                    CustomerType = (CustomerTypeOption)row["CustomerType"]};
+                    CustomerId = (int)dr["CustomerId"],
+                    LastName = dr["LastName"].ToString(),
+                    FirstName = dr["FirstName"].ToString(),
+                    EmailAddress = dr["EmailAddress"].ToString(),
+                    CustomerType = (CustomerTypeOption)dr["CustomerType"]};
 
                 customerInstance.InvoiceList = Invoices.Retrieve(customerInstance.CustomerId);
 
