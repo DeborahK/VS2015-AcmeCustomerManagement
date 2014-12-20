@@ -247,15 +247,20 @@ namespace ACM.BLCSharpTest
         }
 
         /// <summary>
-        ///A test for FindCustomers
+        ///A test for Retrieve
         ///</summary>
         [TestMethod()]
-        [TestCategory("Invalid")]
+        [TestCategory("Valid")]
         public void RetrieveTest()
         {
-            Assert.AreEqual(1, Invoices.Retrieve(2).Count);
-        }
+            // Arrange
 
+            // Act
+            var customerList = Customers.Retrieve();
+
+            // Assert
+            Assert.AreEqual(5, customerList.Count);
+        }
     }
 
 }
