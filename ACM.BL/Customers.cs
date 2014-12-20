@@ -59,14 +59,14 @@ namespace ACM.BL
             DataTable dt = Dac.ExecuteDataTable("CustomerRetrieve");
 
             // Process each customer row
-            foreach (DataRow dr in dt.Rows)
+            foreach (DataRow row in dt.Rows)
             {
                 Customer customerInstance = new Customer {
-                    CustomerId = (int)dr["CustomerId"],
-                    LastName = dr["LastName"].ToString(),
-                    FirstName = dr["FirstName"].ToString(),
-                    EmailAddress = dr["EmailAddress"].ToString(),
-                    CustomerType = (CustomerTypeOption)dr["CustomerType"]};
+                    CustomerId = (int)row["CustomerId"],
+                    LastName = row["LastName"].ToString(),
+                    FirstName = row["FirstName"].ToString(),
+                    EmailAddress = row["EmailAddress"].ToString(),
+                    CustomerType = (CustomerTypeOption)row["CustomerType"]};
 
                 customerInstance.InvoiceList = Invoices.Retrieve(customerInstance.CustomerId);
 
