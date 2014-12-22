@@ -59,7 +59,7 @@ namespace ACM.BL
             // Retrieve the data using the data access component
             DataTable dt = Dac.ExecuteDataTable("CustomerRetrieve");
 
-            // Process each customer row
+            // Process each row in the table
             foreach (DataRow dr in dt.Rows)
             {
                 Customer customerInstance = new Customer {
