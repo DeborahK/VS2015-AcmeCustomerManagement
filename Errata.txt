@@ -1,0 +1,17 @@
+This is the errata file for the "Visual Studio 2015: A First Look at the IDE" course from Pluralsight.
+http://www.pluralsight.com/courses/visual-studio-2015-first-look-ide
+
+This file contains the list of issues and changes between preview versions of Visual Studio 2015.
+
+The course was originally developed using the Visual Studio 2015 Preview from November 2014.
+http://www.visualstudio.com/en-us/news/vs2015-preview-vs
+
+The course was then enhanced for the Visual Studio 2015 CTP 5 release in January of 2015.
+http://www.visualstudio.com/news/vs2015-vs
+
+The following are the changes, issues, and notes regarding the CTP 5 release:
+
+1) Module 1 Clip 1
+  This clip was modified to include a discussion of the Preview vs CTP 5 and provide a link to this errata.
+  
+<More to come>
