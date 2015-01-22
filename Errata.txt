@@ -17,10 +17,22 @@ The following are the changes, issues, and notes regarding the CTP 5 release:
 2) Module 2 Clip 4
   The Live Code Analysis demo using codecracker analyzer does not currently work in CTP 5. The API for the analyzers changed and the update to the codecracker analyzer has not yet been posted to github as of 1/22/15.
   
-3) Module 3
+3) Module 4
   Since the preview, a new Diagnostics Tool window was added to Visual Studio 2015. A new clip to demonstrate this new feature is in progress as of 1/22/15.
   
 4) Module 4 Clip 2
   The breakpoint demonstration presented in this clip does not work in Visual Studio 2015 due to a known bug. To try out the code in the demonstration, set a breakpoint at the top of the routine first and run to that breakpoint. This will ensure that the required libraries are loaded. Then add the breakpoint as shown in the demo.
   
-<more to come>
+5) Module 4 Clip 5
+  The perfTip feature was changed as follows: As of CTP 5, it has a minimum time of 3 ms (instead of 10), the tooltip no longer displays the CPU time, and there is no longer any perfTip options available to set.
+  
+6) Module 5
+  This module covers the new layout customization features. These features did not work on my system using CTP 5. This is a known issue. However, give these features a try because they may work for you.
+  
+7) Module 6 Clip 3
+  This clip covers the new XAML editor Peek Defintion features. These features are not working in CTP 5. This is a known issue.
+  
+8) Module 7 Clip 2
+  This clips was modified based on the added content as discussed above.
+
+PLEASE let me know if you see any other issues or have any other problems with Visual Studio CTP 5.
