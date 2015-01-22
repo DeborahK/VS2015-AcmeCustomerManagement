@@ -14,4 +14,13 @@ The following are the changes, issues, and notes regarding the CTP 5 release:
 1) Module 1 Clip 1
   This clip was modified to include a discussion of the Preview vs CTP 5 and provide a link to this errata.
   
-<More to come>
+2) Module 2 Clip 4
+  The Live Code Analysis demo using codecracker analyzer does not currently work in CTP 5. The API for the analyzers changed and the update to the codecracker analyzer has not yet been posted to github as of 1/22/15.
+  
+3) Module 3
+  Since the preview, a new Diagnostics Tool window was added to Visual Studio 2015. A new clip to demonstrate this new feature is in progress as of 1/22/15.
+  
+4) Module 4 Clip 2
+  The breakpoint demonstration presented in this clip does not work in Visual Studio 2015 due to a known bug. To try out the code in the demonstration, set a breakpoint at the top of the routine first and run to that breakpoint. This will ensure that the required libraries are loaded. Then add the breakpoint as shown in the demo.
+  
+<more to come>
